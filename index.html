@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#06140c">
+<title>Ancestor of Sylhet | Auction Tournament S27</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand"><img src="aos-logo.png" alt="Ancestor of Sylhet logo"><div><b>ANCESTOR OF SYLHET</b><small>AUCTION TOURNAMENT · SEASON 27</small></div></div>
+  <span class="season">SEASON 27</span>
+</header>
+<main class="container">
+  <section class="hero">
+    <img class="hero-logo" src="aos-logo.png" alt="AOS club logo">
+    <div class="eyebrow">A EFOOTBALL GAMING COMMUNITY · EST. 2023</div>
+    <h1>PLAYER <span>CARD</span></h1>
+    <p>Register your details and create your official Auction Tournament Season 27 player card.</p>
+  </section>
+
+  <div class="workspace">
+    <section class="panel form-panel">
+      <div class="panel-heading"><div class="number">01</div><div><span class="eyebrow">PLAYER DETAILS</span><h2>Registration Form</h2></div></div>
+      <form id="playerForm">
+        <label class="upload-box" for="photo">
+          <span class="upload-icon">＋</span><span class="upload-text"><b>Upload Player Photo</b><small>JPG, PNG or WEBP · Use a clear photo</small></span><span class="choose">Browse</span>
+        </label>
+        <input type="file" id="photo" accept="image/*" hidden>
+        <div class="fields">
+          <label class="field"><span>Player Name <i>*</i></span><input id="name" maxlength="40" placeholder="Enter your player name" required></label>
+          <label class="field"><span>Device <i>*</i></span><input id="device" maxlength="60" placeholder="e.g. iPhone 13 Pro" required></label>
+          <label class="field full"><span>User ID <i>*</i></span><input id="userId" maxlength="60" placeholder="Enter your eFootball User ID" required></label>
+          <label class="field full"><span>Club Name <i>*</i></span><input id="club" maxlength="60" placeholder="Enter your club name" required></label>
+        </div>
+        <p class="privacy-note"><span>ⓘ</span> Check your details before creating the card. This demo does not automatically submit responses to an organiser.</p>
+        <div class="actions"><button class="btn primary" type="submit">Create Player Card <span>↗</span></button><button class="btn secondary" type="reset">Clear Form</button></div>
+      </form>
+    </section>
+
+    <section class="panel preview-panel">
+      <div class="panel-heading preview-heading"><div class="number">02</div><div><span class="eyebrow">LIVE PREVIEW</span><h2>Player Card</h2></div><span class="ready">● PREVIEW</span></div>
+      <article id="previewCard" class="player-card">
+        <div class="card-shine"></div>
+        <div class="card-top">
+          <img class="card-logo" src="aos-logo.png" alt="AOS logo">
+          <div class="card-title"><span>ANCESTOR OF SYLHET</span><b>AUCTION TOURNAMENT</b><strong>SEASON 27</strong></div>
+          <div class="est">EST.<b>2023</b></div>
+        </div>
+        <div class="card-ribbon">PLAYER CARD</div>
+        <div class="card-content">
+          <div class="portrait"><div id="photoPlaceholder"><span>♟</span><small>PLAYER PHOTO</small></div><img id="previewPhoto" alt="Player photo" hidden></div>
+          <div class="player-info">
+            <div class="info-row"><span class="info-icon">♟</span><div><small>PLAYER NAME</small><b id="previewName">YOUR NAME</b></div></div>
+            <div class="info-row"><span class="info-icon">▯</span><div><small>DEVICE</small><b id="previewDevice">YOUR DEVICE</b></div></div>
+            <div class="info-row"><span class="info-icon">◎</span><div><small>USER ID</small><b id="previewUserId">YOUR USER ID</b></div></div>
+            <div class="info-row"><span class="info-icon">♜</span><div><small>CLUB NAME</small><b id="previewClub">YOUR CLUB</b></div></div>
+          </div>
+        </div>
+        <div class="card-bottom"><span>NOT JUST A CLUB,<br><b>IT'S A FAMILY</b></span><img src="aos-logo.png" alt=""><span class="est-bottom">ANCESTOR<br>OF SYLHET</span></div>
+        <div class="card-footline">ANCESTOR OF SYLHET · AUCTION TOURNAMENT S27</div>
+      </article>
+      <div class="actions preview-actions"><button class="btn primary" id="downloadPng" type="button">↓ Download Card PNG</button></div>
+      <p class="hint">Create a card to add it to the gallery. PNG download saves the current card as an image.</p>
+    </section>
+  </div>
+
+  <section class="roster-section">
+    <div class="roster-heading"><div><span class="eyebrow">AUCTION TOURNAMENT · S27</span><h2>Player Gallery <span id="playerCount">0</span></h2></div><button class="btn secondary csv-btn" id="downloadCsv" type="button">↓ Export CSV</button></div>
+    <div id="gallery" class="gallery"></div>
+    <div id="emptyState" class="empty"><span>♜</span><b>No player cards yet</b><small>Complete the form above to create the first card.</small></div>
+  </section>
+  <footer><span>ANCESTOR OF SYLHET</span><span>EST. 2023 · SEASON 27</span></footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
